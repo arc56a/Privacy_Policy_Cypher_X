@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Cypher</title>
+    <style>
+        :root {
+            --neon-blue: #00f2fe; --neon-purple: #4facfe;
+            --bg-dark: #0d0d0d; --card-bg: #1a1a1a; --text-gray: #e0e0e0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6; color: var(--text-gray); background-color: var(--bg-dark);
+            margin: 0; padding: 0; transition: all 0.3s ease;
+        }
+        .container {
+            max-width: 850px; margin: 40px auto; padding: 30px;
+            background: var(--card-bg); border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); border: 1px solid #333;
+            position: relative;
+        }
+        .translate-btn {
+            position: absolute; top: 20px; left: 20px; padding: 10px 20px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            border: none; border-radius: 25px; color: white; font-weight: bold;
+            cursor: pointer; box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); z-index: 100;
+        }
+        body.en-mode .translate-btn { left: auto; right: 20px; }
+        h1 { color: var(--neon-blue); text-align: center; border-bottom: 2px solid var(--neon-blue); padding-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { color: var(--neon-purple); margin-top: 35px; padding: 0 15px; font-size: 1.4rem; }
+        html[dir="rtl"] h2 { border-right: 5px solid var(--neon-purple); }
+        html[dir="ltr"] h2 { border-left: 5px solid var(--neon-purple); }
+        p, li { font-size: 1.1rem; margin-bottom: 15px; }
+        .highlight { color: var(--neon-blue); font-weight: bold; }
+        .lang-en { display: none; } .lang-ar { display: block; }
+        body.en-mode .lang-ar { display: none; } body.en-mode .lang-en { display: block; }
+        .footer { text-align: center; margin-top: 50px; padding: 20px; font-size: 0.95rem; color: #777; border-top: 1px solid #222; }
+        .dev-name { color: var(--neon-blue); }
+        @media (max-width: 600px) { .container { margin: 10px; padding: 15px; } .translate-btn { position: relative; width: 100%; } }
+    </style>
+</head>
+<body id="pageBody">
+<div class="container">
+    <button class="translate-btn" onclick="toggleLanguage()" id="transBtn">English</button>
+    <div class="lang-ar">
+        <h1>سياسة الخصوصية - تطبيق Cypher</h1>
+        <p style="text-align: center;">آخر تحديث: <strong>9 سبتمبر 2026</strong></p>
+        <p>مرحباً بك في <span class="highlight">Cypher</span>، المنصة المتكاملة (التعليم، الترفيه، المكتبات، الموسيقى، الأخبار، الفضاء).</p>
+        <h2>1. طبيعة البيانات</h2>
+        <ul>
+            <li><strong>عدم جمع البيانات:</strong> لا نجمع أو نشارك أي معلومات شخصية بشكل تلقائي.</li>
+            <li><strong>تسجيل الدخول:</strong> تسجيل الدخول عبر Google <strong>اختياري تماماً</strong> لنشر الفيديوهات فقط.</li>
+            <li><strong>الملفات المحلية:</strong> الوصول للملفات يكون لتشغيلها محلياً فقط.</li>
+        </ul>
+        <h2>2. تواصل معنا</h2>
+        <p>نسعد بتواصلكم لمشاركة أي <span class="highlight">مشكلة، اقتراح، أو فكرة</span> عبر قسم <span class="highlight">"الدعم الفني"</span> داخل التطبيق.</p>
+        <p>المطور: <span class="highlight">آلُــــعـــرآبـــ ⁵⁶</span></p>
+    </div>
+    <div class="lang-en">
+        <h1>Privacy Policy - Cypher App</h1>
+        <p style="text-align: center;">Last updated: <strong>September 9, 2026</strong></p>
+        <p><span class="highlight">Cypher</span> is a multi-functional platform (Education, Entertainment, Music, News, Space).</p>
+        <h2>1. Data Collection</h2>
+        <ul>
+            <li><strong>Privacy First:</strong> We do not collect or share personal information.</li>
+            <li><strong>Optional Login:</strong> Google Sign-in is <strong>optional</strong> for video publishing only.</li>
+            <li><strong>Local Files:</strong> Storage access is for local playback only.</li>
+        </ul>
+        <h2>2. Contact Us</h2>
+        <p>For any <span class="highlight">issues, suggestions, or ideas</span>, contact us via the <span class="highlight">"Support"</span> section in the app.</p>
+        <p>Developer: <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></p>
+    </div>
+    <div class="footer">
+        <div class="lang-ar">&copy; 2026 منصة Cypher. تم التطوير بواسطة <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></div>
+        <div class="lang-en">&copy; 2026 Cypher Platform. Developed by <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></div>
+    </div>
+</div>
+<script>
+    function toggleLanguage() {
+        const b = document.getElementById('pageBody'); const h = document.documentElement; const btn = document.getElementById('transBtn');
+        if (b.classList.contains('en-mode')) {
+            b.classList.remove('en-mode'); h.setAttribute('dir', 'rtl'); h.setAttribute('lang', 'ar'); btn.innerText = 'English';
+        } else {
+            b.classList.add('en-mode'); h.setAttribute('dir', 'ltr'); h.setAttribute('lang', 'en'); btn.innerText = 'العربية';
+        }
+    }
+</script>
+</body>
+</html>

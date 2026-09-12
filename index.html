@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Cypher</title>
+    <title>Privacy Policy | Cypher X</title>
     <style>
         :root {
             --neon-blue: #00f2fe;
@@ -14,7 +14,7 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             color: var(--text-gray);
             background-color: var(--bg-dark);
             margin: 0;
@@ -24,53 +24,58 @@
         .container {
             max-width: 850px;
             margin: 40px auto;
-            padding: 30px;
+            padding: 40px;
             background: var(--card-bg);
-            border-radius: 15px;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+            border-radius: 25px;
+            box-shadow: 0 0 35px rgba(0, 242, 254, 0.1);
             border: 1px solid #333;
             position: relative;
         }
         .translate-btn {
             position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
+            top: 25px;
+            left: 25px;
+            padding: 10px 25px;
             background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
             border: none;
             border-radius: 25px;
             color: white;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
             z-index: 100;
+            transition: transform 0.2s;
         }
-        body.en-mode .translate-btn {
-            left: auto;
-            right: 20px;
-        }
+        .translate-btn:active { transform: scale(0.95); }
+
+        body.en-mode .translate-btn { left: auto; right: 25px; }
 
         h1 {
             color: var(--neon-blue);
             text-align: center;
-            border-bottom: 2px solid var(--neon-blue);
-            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 242, 254, 0.2);
+            padding-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-size: 1.8rem;
         }
         h2 {
             color: var(--neon-purple);
-            margin-top: 35px;
+            margin-top: 40px;
             padding: 0 15px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        html[dir="rtl"] h2 { border-right: 5px solid var(--neon-purple); }
-        html[dir="ltr"] h2 { border-left: 5px solid var(--neon-purple); }
+        html[dir="rtl"] h2 { border-right: 4px solid var(--neon-purple); }
+        html[dir="ltr"] h2 { border-left: 4px solid var(--neon-purple); }
 
         p, li {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 15px;
+            color: #bbb;
         }
         .highlight {
             color: var(--neon-blue);
@@ -85,86 +90,87 @@
 
         .footer {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            font-size: 0.95rem;
-            color: #777;
+            margin-top: 60px;
+            padding: 25px;
+            font-size: 0.9rem;
+            color: #555;
             border-top: 1px solid #222;
         }
         .dev-name {
             color: var(--neon-blue);
+            font-weight: bold;
         }
         @media (max-width: 600px) {
-            .container { margin: 10px; padding: 15px; }
-            .translate-btn { position: relative; top: 0; left: 0; margin-bottom: 20px; width: 100%; }
+            .container { margin: 15px; padding: 20px; border-radius: 15px; }
+            .translate-btn { position: relative; top: 0; left: 0; margin-bottom: 25px; width: 100%; }
+            h1 { font-size: 1.4rem; }
         }
     </style>
 </head>
 <body id="pageBody">
 
 <div class="container">
-    <button class="translate-btn" onclick="toggleLanguage()" id="transBtn">English</button>
+    <button class="translate-btn" onclick="toggleLanguage()" id="transBtn">English Version</button>
 
     <!-- Arabic Content -->
     <div class="lang-ar">
-        <h1>سياسة الخصوصية - تطبيق Cypher</h1>
-        <p style="text-align: center;">آخر تحديث: <strong>9 سبتمبر 2026</strong></p>
+        <h1>سياسة الخصوصية - Cypher X</h1>
+        <p style="text-align: center; font-size: 0.9rem; color: #666;">آخر تحديث: 12 سبتمبر 2026</p>
 
-        <p>مرحباً بك في <span class="highlight">Cypher</span>، المنصة المتكاملة التي تجمع بين <span class="highlight">التعليم، الترفيه، المكتبات الرقمية، الموسيقى، الأخبار، وعلوم الفضاء</span>. نحن نؤمن بخصوصية المستخدم كأولوية قصوى.</p>
+        <h2>التزامنا بخصوصيتك</h2>
+        <p>نحن في <span class="highlight">Cypher X</span> نضع خصوصيتك في مقدمة أولوياتنا. هذا التطبيق مصمم ليوفر لك تجربة إيمانية وترفيهية متكاملة دون انتهاك خصوصيتك أو جمع بيانات غير ضرورية.</p>
 
-        <h2>1. طبيعة التطبيق والبيانات</h2>
-        <p>تطبيق Cypher مصمم ليكون تجربة غنية وشاملة للمستخدم دون الحاجة لجمع بيانات شخصية إجبارية:</p>
+        <h2>البيانات التي نستخدمها</h2>
+        <p>تطبيقنا يعمل بشكل أساسي على معالجة البيانات داخل جهازك. نحن لا نقوم بجمع أو تخزين أسمائك، صورك الشخصية، أو ملفاتك الخاصة على خوادم خارجية. الوصول إلى ملفات الصوت في جهازك مخصص فقط لتمكينك من تشغيلها داخل التطبيق.</p>
+
+        <h2>الأذونات والصلاحيات</h2>
         <ul>
-            <li><strong>عدم جمع البيانات:</strong> نحن لا نجمع، نخزن، أو نشارك أي معلومات شخصية عنك بشكل تلقائي عند استخدام ميزات التطبيق الأساسية.</li>
-            <li><strong>تسجيل الدخول:</strong> تسجيل الدخول عبر Google هو خيار <strong>اختياري تماماً</strong>. لا يُطلب منك تسجيل الدخول إلا إذا رغبت في استخدام ميزة "نشر الفيديوهات" داخل المنصة.</li>
-            <li><strong>الملفات المحلية:</strong> في ميزة الموسيقى والمكتبات، يطلب التطبيق الوصول للملفات لقراءتها وتشغيلها محلياً فقط على جهازك.</li>
+            <li><span class="highlight">الموقع الجغرافي:</span> نطلب الوصول للموقع فقط لتحديد مواقيت الصلاة بدقة بناءً على منطقتك الزمنية.</li>
+            <li><span class="highlight">ملفات الوسائط:</span> لنتمكن من عرض وتشغيل مكتبة الموسيقى الخاصة بك وتخصيص أغلفة الألبومات.</li>
+            <li><span class="highlight">الإشعارات:</span> لإبقائك على اطلاع بآخر أخبار العالم وتحديثات البودكاست والقرآن.</li>
         </ul>
 
-        <h2>2. خدمات الطرف الثالث</h2>
-        <p>يستخدم التطبيق التقنيات التالية فقط عند الحاجة:</p>
-        <ul>
-            <li><strong>Google Sign-In:</strong> يستخدم فقط للتحقق من الهوية عند الرغبة في النشر، وتتم العملية عبر خوادم Google الآمنة وبشكل اختياري.</li>
-        </ul>
+        <h2>خدمات الطرف الثالث</h2>
+        <p>يعتمد التطبيق على مصادر موثوقة لجلب المحتوى (مثل إذاعة mp3quran ووكالات الأنباء العالمية). عند استخدام هذه الأقسام، يتم طلب البيانات مباشرة من المصدر لضمان السرعة والدقة، ولا يتم مشاركة أي معلومات شخصية مع هذه الجهات.</p>
 
-        <h2>3. التزامنا</h2>
-        <p>نلتزم بشكل مطلق بعدم بيع أو مشاركة أي بيانات مع أي جهات خارجية. خصوصيتك تظل ملكك بالكامل والتطبيق يعمل بخصوصية تامة.</p>
+        <h2>حقوق المستخدم</h2>
+        <p>لك كامل الحرية في التحكم في خصائص التطبيق، بما في ذلك تفعيل أو تعطيل المساعدة سافيرا، وتخصيص نوعية التنبيهات التي ترغب في استقبالها عبر الإعدادات.</p>
 
-        <h2>4. تواصل معنا</h2>
-        <p>نسعد بتواصلكم معنا لمشاركة أي <span class="highlight">مشكلة، اقتراح، أو فكرة جديدة</span> لتطوير المنصة، وذلك مباشرة من داخل التطبيق عبر قسم <span class="highlight">"الدعم الفني"</span>.</p>
-        <p>المطور: <span class="highlight" style="font-size: 1.3rem;">آلُــــعـــرآبـــ ⁵⁶</span></p>
+        <h2>التحديثات</h2>
+        <p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر لتواكب الميزات الجديدة، وسنحرص دائماً على أن تظل هذه التحديثات في مصلحة حماية بياناتك.</p>
     </div>
 
     <!-- English Content -->
     <div class="lang-en">
-        <h1>Privacy Policy - Cypher App</h1>
-        <p style="text-align: center;">Last updated: <strong>September 9, 2026</strong></p>
+        <h1>Privacy Policy - Cypher X</h1>
+        <p style="text-align: center; font-size: 0.9rem; color: #666;">Last Updated: September 12, 2026</p>
 
-        <p><span class="highlight">Cypher</span> is a multi-functional platform covering <span class="highlight">Education, Entertainment, Digital Libraries, Music, News, and Space exploration</span>.</p>
+        <h2>Our Commitment to Your Privacy</h2>
+        <p>At <span class="highlight">Cypher X</span>, your privacy is our top priority. This app is designed to provide a comprehensive spiritual and entertainment experience without violating your privacy or collecting unnecessary data.</p>
 
-        <h2>1. Data Collection & Usage</h2>
+        <h2>The Data We Use</h2>
+        <p>Our app primarily processes data locally on your device. We do not collect, store, or share your names, personal photos, or private files on external servers. Access to local audio files is solely for playback purposes within the app.</p>
+
+        <h2>Permissions</h2>
         <ul>
-            <li><strong>Privacy First:</strong> We do not collect, store, or share any personal information for core app features.</li>
-            <li><strong>Optional Login:</strong> Google Sign-in is strictly <strong>optional</strong>. It is only required if you choose to publish videos within the app.</li>
-            <li><strong>Local Files:</strong> Access to storage is used solely to read and play your local music and library files on your device.</li>
+            <li><span class="highlight">Location:</span> Requested only to determine accurate prayer times based on your time zone.</li>
+            <li><span class="highlight">Media Files:</span> To browse and play your local music library and customize album covers.</li>
+            <li><span class="highlight">Notifications:</span> To keep you informed of global news, podcast updates, and Quranic content.</li>
         </ul>
 
-        <h2>2. Third-Party Services</h2>
-        <p>We use the following technology only when necessary:</p>
-        <ul>
-            <li><strong>Google Sign-In:</strong> Used only for secure, optional authentication when publishing content.</li>
-        </ul>
+        <h2>Third-Party Services</h2>
+        <p>The app relies on trusted sources for content delivery (such as mp3quran radio and international news agencies). Data is requested directly from the source to ensure speed and accuracy, and no personal info is shared with these entities.</p>
 
-        <h2>3. Our Commitment</h2>
-        <p>We strictly commit to not selling or sharing any data with any third parties. Your privacy remains entirely yours.</p>
+        <h2>User Rights</h2>
+        <p>You have full control over app features, including enabling or disabling the Safira Assistant and customizing notification preferences via settings.</p>
 
-        <h2>4. Contact Us</h2>
-        <p>We welcome your feedback! You can contact us for any <span class="highlight">issues, suggestions, or new ideas</span> directly from within the app via the <span class="highlight">"Support"</span> section.</p>
-        <p>Developer: <span class="dev-name" style="font-size: 1.3rem;">آلُــــعـــرآبـــ ⁵⁶</span></p>
+        <h2>Updates</h2>
+        <p>We may update this policy periodically to reflect new features. We will always ensure these updates serve your data protection interests.</p>
     </div>
 
     <div class="footer">
-        <div class="lang-ar">&copy; 2026 منصة Cypher. جميع الحقوق محفوظة. <br> تم التطوير بواسطة <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></div>
-        <div class="lang-en">&copy; 2026 Cypher Platform. All Rights Reserved. <br> Developed by <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></div>
+        <div class="lang-ar">&copy; 2026 منصة Cypher X. جميع الحقوق محفوظة. <br> تطوير بواسطة <span class="dev-name">آلُــــعـــرآبـــ ⁵⁶</span></div>
+        <div class="lang-en">&copy; 2026 Cypher X Platform. All Rights Reserved. <br> Developed by <span class="dev-name">Al-Arrab ⁵⁶</span></div>
     </div>
 </div>
 
@@ -178,12 +184,12 @@
             body.classList.remove('en-mode');
             html.setAttribute('dir', 'rtl');
             html.setAttribute('lang', 'ar');
-            btn.innerText = 'English';
+            btn.innerText = 'English Version';
         } else {
             body.classList.add('en-mode');
             html.setAttribute('dir', 'ltr');
             html.setAttribute('lang', 'en');
-            btn.innerText = 'العربية';
+            btn.innerText = 'النسخة العربية';
         }
     }
 </script>
